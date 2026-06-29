@@ -1,6 +1,9 @@
 from pydantic import BaseModel
 from typing import Optional, Dict, Any
 
+# defines WebhookTransaction structure to store temporarily in internal 
+# program system
+
 class WebhookTransaction(BaseModel):
     event_id: Optional[str]
     event_type: Optional[str]

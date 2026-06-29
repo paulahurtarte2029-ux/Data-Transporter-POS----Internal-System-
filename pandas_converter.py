@@ -1,6 +1,7 @@
 import pandas as pd
 from models import WebhookTransaction
 
+# adds transaction into a pandas dataframe and returns the updated dataframe
 
 class TransactionStore:
 

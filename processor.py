@@ -1,5 +1,8 @@
 from models import WebhookTransaction
 
+# takes transaction information in JSON form and converts it into an internal object
+# WebhookTransaction
+
 def parse_recurrente_payload(payload: dict) -> WebhookTransaction:
     data = payload.get("data", {})
     user = data.get("user", {})
