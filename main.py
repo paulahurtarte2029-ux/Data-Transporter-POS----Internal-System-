@@ -20,6 +20,10 @@ def health_check():
 # this function is the automatic webhook endpoint that Recurrente will call 
 # when a transaction is made
 # function is automatically called whenever a trasnaction request is made through FastAPI
+
+# FastAPI builds an internal routing table used for mapping by giving a URL path
+# this automates the async function recurrente_webhook to be called whenever
+# a request is made following a transaction processed by Recurrente app. 
 @app.post("/webhooks/recurrente")
 async def recurrente_webhook(
     request: Request,
